@@ -18,11 +18,13 @@ console.log(makeTransaction(10, 500, 5000));  // "Insufficient funds!"
 
 function slugify(title) {
   return title
-    .toLowerCase()                
-    .trim()                        
-    .replace(/\s+/g, '-')          
+    .toLowerCase()               
+    .trim()                       
+    .replace(/\s+/g, '-')         
     .replace(/[^a-z0-9\-]/g, '')   
-    .replace(/--+/g, '-')          
+    .replace(/--+/g, '-')         
+    .replace(/^-+/, '')          
+    .replace(/-+$/, '');           
 }
 
 // Перевірка роботи функції
